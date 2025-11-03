@@ -15,7 +15,7 @@
         border: none;
         box-shadow: none;
         padding-inline: .1rem 1rem;
-        margin: 1rem 0;
+        margin: 1.5rem .2rem .5rem;
         cursor: pointer;
         border-radius: unset;
     }

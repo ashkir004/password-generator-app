@@ -86,7 +86,7 @@
     }
 
     .pretty label:before {
-        border: .15rem solid var(--green-200)!important;
+        border: .15rem solid var(--grey-200)!important;
     }
 
     .pretty input:checked~.state.p-primary label:after {
