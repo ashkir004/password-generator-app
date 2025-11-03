@@ -5,10 +5,10 @@ import { passOptions, setOptions } from './options.svelte';
 export function setupSlider(slider, handleUpdate) {
 
     noUiSlider.create(slider, {
-        start: [1, 10],
+        start: [0, 0],
         connect: true,
         range: {
-            'min': 1,
+            'min': 0,
             'max': 20
         }
     });

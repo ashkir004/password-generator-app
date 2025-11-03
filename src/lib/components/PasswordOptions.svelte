@@ -2,7 +2,7 @@
 	import { passOptions, setOptions } from '$lib/options.svelte';
     import 'pretty-checkbox/dist/pretty-checkbox.min.css';
 
-    let checkedOptions = $state(['uppercase', 'lowercase', 'number']);
+    let checkedOptions = $state([]);
 
     $effect(() => {
         let options = {

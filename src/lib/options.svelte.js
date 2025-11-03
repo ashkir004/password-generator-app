@@ -1,6 +1,6 @@
 
 export const passOptions = $state({
-            length: 10,
+            length: 0,
             strength: 0,
             lowercase: false,
             uppercase: false,
