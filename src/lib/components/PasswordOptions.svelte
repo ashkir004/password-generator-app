@@ -97,4 +97,12 @@
         margin-left: var(--sp-200);
     }
 
+    @media (min-width: 48rem) {
+        .pass-options {
+            gap: var(--sp-300);
+            font-size: calc(18 / 16 * 1rem);
+		    line-height: calc(24 / 16 * 1rem);
+        }
+    }
+
 </style>
