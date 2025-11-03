@@ -18,7 +18,6 @@
     }
 
     function setOptions(options) {
-        // passOptions = options;
        for (const option in passOptions) {
             if (!Object.hasOwn(passOptions, option)) continue;
             passOptions[option] = options[option];
@@ -41,8 +40,8 @@
             <PasswordDisplay password={password}/>
             <div class="controls-wrapper">
                 <div class="controls">
-                    <PasswordLength setOptions = { setOptions } />
-                    <PasswordOptions setOptions={setOptions} />
+                    <PasswordLength />
+                    <PasswordOptions />
                     <PasswordStrength />
                 </div>
                 <PasswordGenerate setPassword={setPassword} />
@@ -54,8 +53,6 @@
 <style>
 
     .container {
-        /* padding: var(--sp-200); */
-        /* background-color: bisque; */
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -67,7 +64,6 @@
         display: flex;
         flex-direction: column;
         gap: var(--sp-200);
-        /* width: 100%; */
         min-width: 21rem;
         max-width: 21rem;
     }

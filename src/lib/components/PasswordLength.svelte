@@ -1,25 +1,16 @@
 <script>
     import Slider from '$lib/components/Slider.svelte';
     import { passOptions } from '$lib/options.svelte';
-    let step = 1;
-    let startValue = 10;
-    let value = $state(startValue);
-    let { setOptions } = $props();
-
-
 </script>
 
-<div class="password-length text-preset-3">
+<div class="password-length">
     <div class="char-length-wrapper">
         <label for="character-length" class="char-length">Character Length
         </label>
         <p class="length">{passOptions.length}</p>
     </div>
 
-    <Slider startValue={[startValue]} range={{'min': 1, 'max': 20}} step = {step} handleUpdate={(values, handle) => {
-        let merged = {...passOptions, length : parseInt(values[0])};
-        setOptions(merged);
-    }} />
+    <Slider />
     
 </div>
 <style>
@@ -31,10 +22,12 @@
         gap: var(--sp-300);
         display: block;
         width: 100%;
+        font-family: "JetBrainsMonoBold";
+		font-size: calc(18 / 16 * 1rem);
+		line-height: calc(24 / 16 * 1rem);
     }
 
     .char-length-wrapper {
-        /* background-color: blue; */
         display: flex;
         flex-direction: row;
         justify-content: space-between;

@@ -1,10 +1,8 @@
 <script>
-	import { passOptions } from '$lib/options.svelte';
+	import { passOptions, setOptions } from '$lib/options.svelte';
     import 'pretty-checkbox/dist/pretty-checkbox.min.css';
 
     let checkedOptions = $state(['uppercase', 'lowercase', 'number']);
-    let lockedOption = $state('lowercase');
-    let { setOptions } = $props();
 
     $effect(() => {
         let options = {
@@ -16,12 +14,16 @@
             symbol: false,
         }
 
-        checkedOptions.forEach((option) => {
-            options[option] = true;
-            options.strength += 1;
-        });
+        if (checkedOptions.length === 0) {
+            options.strength = 0;
+        } else {
+            checkedOptions.forEach((option) => {
+                options[option] = true;
+                options.strength += 1;
+            });
 
-        if (passOptions.length < 8) options.strength = 1;
+            if (passOptions.length < 8) options.strength = 1;
+        }
 
         setOptions(options);
 
@@ -30,29 +32,25 @@
     let options = [
         {
             label: "Include Uppercase Letters",
-            id: "uppercase",
-            checked: true,
+            id: "uppercase"
         },
         {
             label: "Include Lowercase Letters",
-            id: "lowercase",
-            checked: true,
+            id: "lowercase"
         },
         {
             label: "Include Numbers",
-            id: "number",
-            checked: true,
+            id: "number"
         },
         {
             label: "Include Symbols",
             id: "symbol",
-            checked: false,
         },
     ];
 
 </script>
 
-<div class="pass-options text-preset-4">
+<div class="pass-options">
     {#each options as option}
     <div class="pretty p-svg">
         <input type="checkbox"
@@ -77,6 +75,9 @@
         display: flex;
         flex-direction: column;
         gap: var(--sp-200);
+        font-family: "JetBrainsMonoBold";
+		font-size: calc(16 / 16 * 1rem);
+		line-height: calc(20 / 16 * 1rem);
     }
 
     .svg {

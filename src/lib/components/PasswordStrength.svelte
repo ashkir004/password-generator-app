@@ -1,6 +1,5 @@
 <script>
 	import { passOptions } from "$lib/options.svelte";
-	import { onMount } from "svelte";
 
     const STRENGTH_LABEL = ["TOO WEAK!", "WEAK", "MEDIUM", "STRONG"];
 

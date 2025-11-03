@@ -60,29 +60,4 @@
 			url("/assets/JetBrainsMono-Bold.ttf");
 		font-weight: bold;
 	}
-
-	:global(.text-preset-1) {
-		font-family: "JetBrainsMonoBold";
-		font-size: calc(32 / 16 * 1rem);
-		line-height: calc(42 / 16 * 1rem);
-	}
-
-	:global(.text-preset-2) {
-		font-family: "JetBrainsMonoBold";
-		font-size: calc(24 / 16 * 1rem);
-		line-height: calc(32 / 16 * 1rem);
-	}
-
-	:global(.text-preset-3) {
-		font-family: "JetBrainsMonoBold";
-		font-size: calc(18 / 16 * 1rem);
-		line-height: calc(24 / 16 * 1rem);
-	}
-	
-	:global(.text-preset-4) {
-		font-family: "JetBrainsMonoBold";
-		font-size: calc(16 / 16 * 1rem);
-		line-height: calc(20 / 16 * 1rem);
-	}
-
 </style>

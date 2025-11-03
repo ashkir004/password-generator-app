@@ -18,6 +18,7 @@ Secure, configurable password generator built with Sveltekit — adjustable leng
 - Vite
 - JavaScript
 
+
 ## Quick start
 
 Open a terminal in the project folder and run:
@@ -43,11 +44,16 @@ Key files and folders:
 - `src/lib` — password generation logic and helper modules
 - `src/lib/components` — Svelte UI components (PasswordDisplay, PasswordOptions, PasswordLength, etc.)
 
-## Contributing
 
-Contributions are welcome. Open an issue or submit a pull request.
+## Links
 
-## License
+### Live Site: [password-generator-app](https://password-generator-app-ashkir004.netlify.app/)
 
-MIT License
+### Author: [frontendmentor.io/ashkir004](https://www.frontendmentor.io/profile/ashkir004)
 
+## Acknowledgements
+- Thanks to ...
+    - [frontendmentor.io](https://www.frontendmentor.io/) challenge
+    - [nouislider](https://refreshless.com/nouislider/)
+    - [pretty-checkbox](https://lokesh-coder.github.io/pretty-checkbox/)
+    - [netlify](https://netlify.com/)
